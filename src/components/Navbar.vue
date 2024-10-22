@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <div @click="$router.push('/')" style="cursor:pointer;">Главная</div>
+    <my-button @click="$router.push('/')" style="cursor:pointer;">Главная</my-button>
     <div class="navbar__btns">
       <my-button @click="$router.push('/posts')">Посты</my-button>
       <my-button @click="$router.push('/about')" style="margin-left: 20px;">О сайте</my-button>
@@ -9,7 +9,10 @@
 </template>
 
 <script>
+import MyButton from "@/components/Ui/MyButton.vue";
+
 export default {
+  components: {MyButton}
 
 }
 </script>
